@@ -1,5 +1,7 @@
 # vfat.io Documentation
 
+![](img/vfat_bird-modified.png)
+
 <br>
 
 [vfat.io](https://vfat.io) is a portfolio management app
