@@ -1,4 +1,9 @@
-# Portfolio view
+---
+label: Portfolio
+order: 101
+---
+
+# Portfolio View
 
 ![Main view](img/portfolio/main_view.png)
 After connecting your wallet, or entering a 0x address or ENS name, you are shown that wallet's positions on all chains. You can see the balance, current price and $ total for each position.

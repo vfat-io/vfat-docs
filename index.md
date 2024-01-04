@@ -1,3 +1,7 @@
+---
+label: Welcome
+---
+
 # vfat.io Documentation
 
 ![](img/vfat_bird-modified.png)
