@@ -13,3 +13,9 @@ https://reports.yaudit.dev/reports/06-2023-Sickle/
 https://reports.yaudit.dev/reports/10-2023-Sickle-Update/
 
 https://reports.yaudit.dev/reports/05-2024-Sickle-3/
+
+---
+
+LendingStrategy and SickleMultisig
+
+https://reports.yaudit.dev/reports/06-2024-Vfat-Sickle-Multisig/
