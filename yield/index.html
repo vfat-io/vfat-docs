@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771573859008">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773411988215">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.771573859008" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.773411988215" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.771573859008" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.773411988215" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.771573859008" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.773411988215" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -228,7 +228,88 @@
         <span>Fee Structure</span>
     </h3>
 </doc-anchor-target>
-<p>Sickle charges 9 basis points (0.09%) on deposits and withdrawals, and 90 bps (0.9%) on compounds and harvests.</p>
+<p>Depending on your choice of deposit or withdrawal method, there may be a charge, according to the table below:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Method</th>
+<th>Fee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deposit LP token or NFT</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Deposit both underlying tokens</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Deposit other token (swap takes place)</td>
+<td>0.09%</td>
+</tr>
+<tr>
+<td>Withdraw LP token or NFT</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Withdraw to both underlying tokens</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Withdraw to single token (swap takes place)</td>
+<td>0.09%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Other actions always carry a fee, as below:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Fee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harvest</td>
+<td>0.9% of rewards</td>
+</tr>
+<tr>
+<td>Compound</td>
+<td>0.9% of rewards</td>
+</tr>
+<tr>
+<td>Rebalance &lt;0.05% fee pool</td>
+<td>0.01% of position</td>
+</tr>
+<tr>
+<td>Rebalance &lt;0.3% fee pool</td>
+<td>0.03% of position</td>
+</tr>
+<tr>
+<td>Rebalance higher fee pool</td>
+<td>0.05% of position</td>
+</tr>
+<tr>
+<td>Auto-Harvest</td>
+<td>1.2% of rewards</td>
+</tr>
+<tr>
+<td>Auto-Compound</td>
+<td>1.8% of rewards</td>
+</tr>
+<tr>
+<td>Auto-Rebalance</td>
+<td>Same as manual</td>
+</tr>
+</tbody>
+</table>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
