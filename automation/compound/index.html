@@ -9,34 +9,34 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Yield View</title>
-    <meta name="title" content="Yield View">
-    <meta name="description" content="Compare yield products across DeFi, enter and exit positions, compound your earnings in 1 click. All from one interface.">
+    <title>Automatic Compound</title>
+    <meta name="title" content="Automatic Compound">
+    <meta name="description" content="Auto-Compound automatically compounds your positions at the optimal frequency.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.vfat.io/yield/">
+    <link rel="canonical" href="https://docs.vfat.io/automation/compound/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.vfat.io/yield/">
-    <meta property="og:title" content="Yield View">
-    <meta property="og:description" content="Compare yield products across DeFi, enter and exit positions, compound your earnings in 1 click. All from one interface.">
-    <meta property="og:image" content="https://docs.vfat.io/img/yield/yield_view.png">
+    <meta property="og:url" content="https://docs.vfat.io/automation/compound/">
+    <meta property="og:title" content="Automatic Compound">
+    <meta property="og:description" content="Auto-Compound automatically compounds your positions at the optimal frequency.">
+    <meta property="og:image" content="https://docs.vfat.io/img/automation/settings.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.vfat.io/yield/">
-    <meta property="twitter:title" content="Yield View">
-    <meta property="twitter:description" content="Compare yield products across DeFi, enter and exit positions, compound your earnings in 1 click. All from one interface.">
-    <meta property="twitter:image" content="https://docs.vfat.io/img/yield/yield_view.png">
+    <meta property="twitter:url" content="https://docs.vfat.io/automation/compound/">
+    <meta property="twitter:title" content="Automatic Compound">
+    <meta property="twitter:description" content="Auto-Compound automatically compounds your positions at the optimal frequency.">
+    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/settings.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.773515933407" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.773515933407" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -51,10 +51,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../img/vfat_bird-modified.png">
-                                <img class="max-h-10 hidden dark:inline-block" src="../img/vfat_bird-modified.png">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../img/vfat_bird-modified.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../img/vfat_bird-modified.png">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">vfat.io</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
@@ -169,147 +169,36 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="yield-view" class="break-words">
+<doc-anchor-target id="automatic-compound" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#yield-view">#</doc-anchor-trigger>
-        <span>Yield View</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#automatic-compound">#</doc-anchor-trigger>
+        <span>Automatic Compound</span>
     </h1>
 </doc-anchor-target>
-<p>Compare yield products across DeFi, enter and exit positions, compound your earnings in 1 click. All from one interface.</p>
-<p>vfat.io lets you choose from a plethora of DeFi products, and offers intuitive and seamless interaction. No more convoluted series of transactions such as swapping, adding liquidity and staking needed to start earning yield. No more having to use 3 or 4 websites and getting a PhD in invariants to accomplish the above. Simply choose the pool you want and click Deposit.</p>
+<p>Auto-Compound automatically compounds your positions at the optimal frequency.</p>
+<p>This is calculated using a formula that takes in the position size, the APR and the current gas cost.</p>
+<p>There is a 1.8% auto-compound fee on rewards, part of which is used to pay for gas costs (no further user input needed).</p>
+<p>The setting can be enabled in two places:</p>
+<p>Firstly in the general settings (gear icon on the top right).</p>
 <p><figure class="content-center">
-    <img src="../img/yield/yield_view.png" alt="Yield View">
-    <figcaption class="caption">Yield View</figcaption>
+    <img src="../../img/automation/settings.png" alt="Settings">
+    <figcaption class="caption">Settings</figcaption>
 </figure>
 </p>
-<p>At launch two projects are supported, <a href="https://velodrome.finance/">Velodrome</a> on Optimism and <a href="https://aerodrome.finance/">Aerodrome</a> on Base.</p>
-<p>Each pool in these projects is comprised of two tokens, and can be either stable (token prices should be similar) or volatile (all other pools). The total value locked (TVL), chain, and APR are shown for each pool.</p>
-<p>After connecting your wallet and choosing a pool you want to enter, you can do so in one click by using the Deposit button at the end of the row. There is a pre-selected amount of ETH to quick deposit, which can be adjusted by the drop-down menu:</p>
+<p>Secondly in the Compound tab of any active position.</p>
 <p><figure class="content-center">
-    <img src="../img/yield/quick_deposit.png" alt="Quick Deposit">
-    <figcaption class="caption">Quick Deposit</figcaption>
+    <img src="../../img/automation/compound.png" alt="Compound">
+    <figcaption class="caption">Compound</figcaption>
 </figure>
 </p>
-<p>Alternatively by clicking anywhere on a pool row, it is loaded into the action menu:</p>
-<p><figure class="content-center">
-    <img src="../img/yield/action_menu.png" alt="Action Menu">
-    <figcaption class="caption">Action Menu</figcaption>
-</figure>
-</p>
-<p>There you can enter a custom ETH amount to deposit, or choose a different token to deposit with. Select your preferred slippage, and view the route taken by expanding the Deposit details box.</p>
-<p><figure class="content-center">
-    <img src="../img/yield/route_view.png" alt="Route View">
-    <figcaption class="caption">Route View</figcaption>
-</figure>
-</p>
-<p>After depositing, you can also view your position in the Deposits tab at the top:</p>
-<p><figure class="content-center">
-    <img src="../img/yield/position_view.png" alt="Position View">
-    <figcaption class="caption">Position View</figcaption>
-</figure>
-</p>
-<p>The quick actions on the right allow you to Compound your earnings, or Exit back to ETH. Selecting the row brings up more options such as withdrawing to a different token, or harvesting any earnings and optionally converting them to ETH or a different token.</p>
-<p><figure class="content-center">
-    <img src="../img/yield/harvest.png" alt="Harvest">
-    <figcaption class="caption">Harvest</figcaption>
-</figure>
-</p>
-<doc-anchor-target id="contract-infrastructure">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#contract-infrastructure">#</doc-anchor-trigger>
-        <span>Contract Infrastructure</span>
-    </h3>
-</doc-anchor-target>
-<p><a href="https://vfat.io/yield">vfat.io Yield</a> is powered by Sickle, a self-custodied contract that is deployed on each chain when making your first deposit. Sickle can perform complex actions in a single transaction, as defined in Strategy contracts, such as the inaugural Aerodrome Strategy.</p>
-<p>Contracts have been audited by <a href="https://reports.yaudit.dev/reports/10-2023-Sickle-Update/">yAudit</a>. Please note smart contracts bear risk regardless of audits, and there is always the underlying risk of the pool entered.</p>
-<doc-anchor-target id="fee-structure">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fee-structure">#</doc-anchor-trigger>
-        <span>Fee Structure</span>
-    </h3>
-</doc-anchor-target>
-<p>Depending on your choice of deposit or withdrawal method, there may be a charge, according to the table below:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Method</th>
-<th>Fee</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Deposit LP token or NFT</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>Deposit both underlying tokens</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>Deposit other token (swap takes place)</td>
-<td>0.09%</td>
-</tr>
-<tr>
-<td>Withdraw LP token or NFT</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>Withdraw to both underlying tokens</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>Withdraw to single token (swap takes place)</td>
-<td>0.09%</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Other actions always carry a fee, as below:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Action</th>
-<th>Fee</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Harvest</td>
-<td>0.9% of rewards</td>
-</tr>
-<tr>
-<td>Compound</td>
-<td>0.9% of rewards</td>
-</tr>
-<tr>
-<td>Rebalance &lt;0.05% fee pool</td>
-<td>0.01% of position</td>
-</tr>
-<tr>
-<td>Rebalance &lt;0.3% fee pool</td>
-<td>0.03% of position</td>
-</tr>
-<tr>
-<td>Rebalance higher fee pool</td>
-<td>0.05% of position</td>
-</tr>
-<tr>
-<td>Auto-Harvest</td>
-<td>1.2% of rewards</td>
-</tr>
-<tr>
-<td>Auto-Compound</td>
-<td>1.8% of rewards</td>
-</tr>
-<tr>
-<td>Auto-Rebalance</td>
-<td>Same as manual</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>It is enabled once per chain and applies to all positions on that chain.</p>
+<p>The general setting of Automation needs to be enabled as well, so this requires two transactions:</p>
+<ol type="a">
+<li>Enable Automation</li>
+<li>Enable Auto-Compound</li>
+</ol>
+<p>These can then be disabled in the general settings.</p>
+<p>Auto-Compound and Auto-Harvest are mutually exclusive, only one per chain can be enabled.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -319,20 +208,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../sickle/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../automation/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Sickle</span>
+                                                <span class="block mt-1">Automation</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../automation/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../automation/harvest/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Automation</span>
+                                                <span class="block mt-1">Automatic Harvest</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -376,6 +265,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Yield", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Automatic Compound", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
