@@ -2,7 +2,7 @@
 
 Auto-Compound automatically compounds your positions at the optimal frequency.
 
-This is calculated using a formula that takes in the position size, the APR and the current gas cost.
+This is calculated using a simulation that takes in the position size, the APR and the current gas cost. Different frequency numbers are tested (daily, twice  a day, etc.) until the best one is found. If the current rewards are higher than required by the frequency calculation, auto-compound is triggered. This simulation is done for every position each time the bot runs.
 
 There is a 1.8% auto-compound fee on rewards, part of which is used to pay for gas costs (no further user input needed).
 
