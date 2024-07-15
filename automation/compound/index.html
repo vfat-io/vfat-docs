@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.773515933407">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774334784941">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.773515933407" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.774334784941" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.774334784941" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.773515933407" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.774334784941" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -176,7 +176,7 @@
     </h1>
 </doc-anchor-target>
 <p>Auto-Compound automatically compounds your positions at the optimal frequency.</p>
-<p>This is calculated using a formula that takes in the position size, the APR and the current gas cost.</p>
+<p>This is calculated using a simulation that takes in the position size, the APR and the current gas cost. Different frequency numbers are tested (daily, twice  a day, etc.) until the best one is found. If the current rewards are higher than required by the frequency calculation, auto-compound is triggered. This simulation is done for every position each time the bot runs.</p>
 <p>There is a 1.8% auto-compound fee on rewards, part of which is used to pay for gas costs (no further user input needed).</p>
 <p>The setting can be enabled in two places:</p>
 <p>Firstly in the general settings (gear icon on the top right).</p>
