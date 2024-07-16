@@ -4,11 +4,13 @@ When a concentrated liquidity (CL) position is out of range, it needs rebalancin
 
 Auto-Rebalance does this by monitoring all out of range positions in a loop. When one is found, we retrieve quotes for swaps from all supported aggregators, then simulate the transaction using the best one. If it results in less dust (leftover tokens) and price impact than the user has specified, the rebalance takes place, otherwise the attempt is repeated in the next loop.
 
+Auto-Rebalance does not take place if the protocol fees would be less than the gas cost. Depending on the chain this could mean the position needs to be larger than $1,000 (L2s) or $10,000 (Ethereum).
+
 The new position will use the same width as the previous one, but centered under the new price. For example a -1% +2% width position (-100 ticks, +200 ticks from active tick space), will remain -1% +2% after rebalancing.
 
 Auto-Rebalance will automatically be activated for the new position as well, using the same settings as the last position.
 
-Enabling Auto-Rebalance is done in the Rebalance tab in an active CL position (whether in range or not). 
+Enabling Auto-Rebalance is done in the Rebalance tab in an active CL position (whether in range or not).
 
 ## Required Configuration
 
