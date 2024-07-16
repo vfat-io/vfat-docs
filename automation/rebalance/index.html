@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774334784941">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774453002266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.774334784941" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.774453002266" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.774334784941" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.774453002266" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.774334784941" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.774453002266" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,6 +175,7 @@
 </doc-anchor-target>
 <p>When a concentrated liquidity (CL) position is out of range, it needs rebalancing. This is done by withdrawing the single token in the position (since out of range positions are only comprised of one token), swapping an appropriate amount of it for the other token, and then creating a new CL position in-range.</p>
 <p>Auto-Rebalance does this by monitoring all out of range positions in a loop. When one is found, we retrieve quotes for swaps from all supported aggregators, then simulate the transaction using the best one. If it results in less dust (leftover tokens) and price impact than the user has specified, the rebalance takes place, otherwise the attempt is repeated in the next loop.</p>
+<p>Auto-Rebalance does not take place if the protocol fees would be less than the gas cost. Depending on the chain this could mean the position needs to be larger than $1,000 (L2s) or $10,000 (Ethereum).</p>
 <p>The new position will use the same width as the previous one, but centered under the new price. For example a -1% +2% width position (-100 ticks, +200 ticks from active tick space), will remain -1% +2% after rebalancing.</p>
 <p>Auto-Rebalance will automatically be activated for the new position as well, using the same settings as the last position.</p>
 <p>Enabling Auto-Rebalance is done in the Rebalance tab in an active CL position (whether in range or not).</p>
