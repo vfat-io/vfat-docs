@@ -60,8 +60,8 @@ Other actions always carry a fee, as below:
 | --- | --- |
 | Harvest | 0.9% of rewards |
 | Compound | 0.9% of rewards |
-| Rebalance <0.05% fee pool | 0.01% of position |
-| Rebalance <0.3% fee pool | 0.03% of position |
+| Rebalance <=0.05% fee pool | 0.01% of position |
+| Rebalance <=0.3% fee pool | 0.03% of position |
 | Rebalance higher fee pool | 0.05% of position |
 | Auto-Harvest | 1.2% of rewards |
 | Auto-Compound | 1.8% of rewards |
