@@ -38,7 +38,7 @@ Buffer settings are relative, so a buffer of -1% +1% will remain so when a posit
 
 Lastly stop loss values can be set on either side. Continuing the previous example, a stop loss value of 2700 on the lower side will mean that automatic rebalancing will stop completely if the price drops below 2700.
 
-The same mechanism on the upper side if setting a stop loss of 3600 would disable all automatic rebalancing once hte price goes above 3600.
+The same mechanism on the upper side if setting a stop loss of 3600 would disable all automatic rebalancing once the price goes above 3600.
 
 Stop loss settings are absolute, so a stop loss setting of 2700, 3600 will remain the same when a position is rebalanced.
 
