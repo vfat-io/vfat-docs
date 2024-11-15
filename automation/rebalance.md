@@ -51,7 +51,7 @@ Further to the above there are two advanced configuration options. These are opt
 
 ### Buffer
 
-![Buffer](../img/automation/rebalance-buffer-positive.png)
+![PositiveBuffer](../img/automation/rebalance-buffer-positive.png)
 
 This adds a buffer on either side of the position range, in which rebalancing should not take place. For example if a user's position is in the 3000-3300 range, a buffer of 1% on the lower side will mean that rebalance will not take place when the price is between 2970 and 3000. While the price is in that buffer the position will remain as is.
 
@@ -61,7 +61,7 @@ Buffer settings are relative, so a buffer of 1%, 1% will remain so when a positi
 
 Negative buffers are also allowed.
 
-![Buffer](../img/automation/rebalance-buffer-negative.png)
+![Negative Buffer](../img/automation/rebalance-buffer-negative.png)
 
 A buffer of -1% on the lower side in the example above would mean that the rebalance would not take place when the price is between 3030 and 3300, but it will take place when the price is below 3030, while the position might still be in range.
 
