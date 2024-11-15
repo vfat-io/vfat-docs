@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782313449241">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.784967927027">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -21,22 +21,22 @@
     <meta property="og:url" content="https://docs.vfat.io/automation/compound/">
     <meta property="og:title" content="Automatic Compound">
     <meta property="og:description" content="Auto-Compound automatically compounds your positions at the optimal frequency.">
-    <meta property="og:image" content="https://docs.vfat.io/img/automation/settings.png">
+    <meta property="og:image" content="https://docs.vfat.io/img/automation/compound-new-position.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.vfat.io/automation/compound/">
     <meta property="twitter:title" content="Automatic Compound">
     <meta property="twitter:description" content="Auto-Compound automatically compounds your positions at the optimal frequency.">
-    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/settings.png">
+    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/compound-new-position.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.782313449241" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.784967927027" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -179,26 +179,26 @@
 <p>This is calculated using a simulation that takes in the position size, the APR and the current gas cost. Different frequency numbers are tested (daily, twice  a day, etc.) until the best one is found. If the current rewards are higher than required by the frequency calculation, auto-compound is triggered. This simulation is done for every position each time the bot runs.</p>
 <p>There is a 1.8% auto-compound fee on rewards, part of which is used to pay for gas costs (no further user input needed).</p>
 <p>The setting can be enabled in two places:</p>
-<p>Firstly in the general settings (gear icon on the top right).</p>
+<p>Firstly when opening a new position</p>
 <p><figure class="content-center">
-    <img src="../../img/automation/settings.png" alt="Settings">
-    <figcaption class="caption">Settings</figcaption>
+    <img src="../../img/automation/compound-new-position.png" alt="New Position">
+    <figcaption class="caption">New Position</figcaption>
 </figure>
 </p>
 <p>Secondly in the Compound tab of any active position.</p>
 <p><figure class="content-center">
-    <img src="../../img/automation/compound.png" alt="Compound">
-    <figcaption class="caption">Compound</figcaption>
+    <img src="../../img/automation/compound-tab.png" alt="Compound Tab">
+    <figcaption class="caption">Compound Tab</figcaption>
 </figure>
 </p>
-<p>It is enabled once per chain and applies to all positions on that chain.</p>
+<p>It is enabled individually for each position.</p>
 <p>The general setting of Automation needs to be enabled as well, so this requires two transactions:</p>
 <ol type="a">
 <li>Enable Automation</li>
 <li>Enable Auto-Compound</li>
 </ol>
 <p>These can then be disabled in the general settings.</p>
-<p>Auto-Compound and Auto-Harvest are mutually exclusive, only one per chain can be enabled.</p>
+<p>Auto-Compound and Auto-Harvest are mutually exclusive, only one per each position can be enabled.</p>
 
                                 
                                 <!-- Required only on API pages -->

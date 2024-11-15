@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782313449241">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.784967927027">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -21,20 +21,22 @@
     <meta property="og:url" content="https://docs.vfat.io/automation/rebalance/">
     <meta property="og:title" content="Automatic Rebalance">
     <meta property="og:description" content="When a concentrated liquidity (CL) position is out of range, it needs rebalancing.">
+    <meta property="og:image" content="https://docs.vfat.io/img/automation/rebalance-new-position.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.vfat.io/automation/rebalance/">
     <meta property="twitter:title" content="Automatic Rebalance">
     <meta property="twitter:description" content="When a concentrated liquidity (CL) position is out of range, it needs rebalancing.">
+    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/rebalance-new-position.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.782313449241" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.784967927027" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -173,12 +175,20 @@
         <span>Automatic Rebalance</span>
     </h1>
 </doc-anchor-target>
-<p>When a concentrated liquidity (CL) position is out of range, it needs rebalancing. This is done by withdrawing the single token in the position (since out of range positions are only comprised of one token), swapping an appropriate amount of it for the other token, and then creating a new CL position in-range.</p>
-<p>Auto-Rebalance does this by monitoring all out of range positions in a loop. When one is found, we retrieve quotes for swaps from all supported aggregators, then simulate the transaction using the best one. If it results in less dust (leftover tokens) and price impact than the user has specified, the rebalance takes place, otherwise the attempt is repeated in the next loop.</p>
+<p>When a concentrated liquidity (CL) position is out of range, it needs rebalancing. This is done by withdrawing the single token in the position (since out-of-range positions are only comprised of one token), swapping an appropriate amount of it for the other token, and then creating a new CL position in-range.</p>
+<p>Auto-Rebalance does this by monitoring all out-of-range positions in a loop. When one is found, we retrieve quotes for swaps from all supported aggregators, then simulate the transaction using the best one. If it results in less dust (leftover tokens), slippage and price impact than the user has specified, the rebalance takes place, otherwise the attempt is repeated in the next loop.</p>
 <p>Auto-Rebalance does not take place if the protocol fees would be less than the gas cost. Depending on the chain this could mean the position needs to be larger than $1,000 (L2s) or $10,000 (Ethereum).</p>
-<p>The new position will use the same width as the previous one, but centered under the new price. For example a -1% +2% width position (-100 ticks, +200 ticks from active tick space), will remain -1% +2% after rebalancing.</p>
+<p>The new position will use the same width as the previous one, and it will maintain its ratio of tick spaces below to tick spaces above. For example a -1% +3% width position (-100 ticks, +300 ticks from active tick space), will remain -1% +3% after rebalancing.</p>
 <p>Auto-Rebalance will automatically be activated for the new position as well, using the same settings as the last position.</p>
-<p>Enabling Auto-Rebalance is done in the Rebalance tab in an active CL position (whether in range or not).</p>
+<p>Enabling Auto-Rebalance can be done in two places.</p>
+<ol>
+<li><p>When Opening a new position</p>
+<p><img src="../../img/automation/rebalance-new-position.png" alt="New Position" /></p>
+</li>
+<li><p>in the Rebalance tab in an active CL position (whether in range or not).</p>
+<p><img src="../../img/automation/rebalance-tab.png" alt="Rebalance Tab" /></p>
+</li>
+</ol>
 <doc-anchor-target id="required-configuration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#required-configuration">#</doc-anchor-trigger>
@@ -191,39 +201,89 @@
         <span>Rewards</span>
     </h3>
 </doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../img/automation/rebalance-rewards.png" alt="Rewards">
+    <figcaption class="caption">Rewards</figcaption>
+</figure>
+</p>
 <p>There are two ways to handle the rewards that a position has accumulated before it went out of range, they can be either compounded back into the position or harvested out to the user&#x27;s wallet. Optionally when harvesting it can be converted to a different token. The fee charged is 1.8% of rewards.</p>
+<doc-anchor-target id="dust---slippage---price-impact">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dust---slippage---price-impact">#</doc-anchor-trigger>
+        <span>Dust - Slippage - Price Impact</span>
+    </h3>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../img/automation/rebalance-dust-slippage-impact.png" alt="Dust-Slippage-Impact">
+    <figcaption class="caption">Dust-Slippage-Impact</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="dust">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dust">#</doc-anchor-trigger>
+        <span>Dust</span>
+    </h3>
+</doc-anchor-target>
+<p>When rebalancing, the best effort is made to use the same amount of each token as the previous position. However due to slippage and rounding errors this is not always possible. The difference is the dust. Dust is not lost, it is sent back to the user&#x27;s wallet at the end of the rebalance. In order to avoid dwindling position sizes, you can choose a maximum % of dust allowed, the default being 1%. If the dust is higher than that, the rebalance will fail and be tried again in the next loop.</p>
 <doc-anchor-target id="slippage">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#slippage">#</doc-anchor-trigger>
         <span>Slippage</span>
     </h3>
 </doc-anchor-target>
-<p>The user has to select an appropriate slippage. This is used both for the dust calculation and for price impact. For instance in a pool with large liquidity rebalancing may work with as low as 0.1%, but for smaller pools or larger positions a higher value would be required.</p>
-<p>Further to slippage there are two advanced configuration options. These are optional, and they are used to create a custom range in which Auto-Rebalance should take place. The default setting, when not using advanced configuration, is to always attempt to rebalance when the position is out of range.</p>
+<p>Slippage is the % difference between the expected price and the price at the time of the swap. For example if the expected price is 3000 and the price at the time of the swap is 3015, the slippage is 0.5%. This happens when the price of the asset moves between the time the quote is generated and the time the swap is executed. If the price moves more than the slippage value, the rebalance will fail and be tried again in the next loop.</p>
+<doc-anchor-target id="price-impact">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#price-impact">#</doc-anchor-trigger>
+        <span>Price Impact</span>
+    </h3>
+</doc-anchor-target>
+<p>Price impact is the % difference in price between the asset being sold and the asset being bought. This is estimated by the aggregator used for the swap. If the price impact is higher than the value set, the rebalance will fail and be tried again in the next loop.</p>
 <doc-anchor-target id="advanced-configuration">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-configuration">#</doc-anchor-trigger>
         <span>Advanced Configuration</span>
     </h2>
 </doc-anchor-target>
+<p>Further to the above there are two advanced configuration options. These are optional, and they are used to create a custom range in which Auto-Rebalance should take place. The default setting, when not using advanced configuration, is to always attempt to rebalance when the position is out of range.</p>
 <doc-anchor-target id="buffer">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#buffer">#</doc-anchor-trigger>
         <span>Buffer</span>
     </h3>
 </doc-anchor-target>
-<p>This adds a buffer on either side of the position range, in which rebalancing should not take place. For example if a user&#x27;s position is in the 3000-3300 range, a buffer of -1% on the lower side will mean that rebalance will not take place when the price is between 2970 and 3000. While the price is in that buffer the position will remain as is.</p>
-<p>Similarly in that example a buffer of +1% on the upper side will mean that rebalance will not take place between 3300 and 3333.</p>
-<p>Buffer settings are relative, so a buffer of -1% +1% will remain so when a position is rebalanced (-1% from the new lower end, +1% from the new upper end).</p>
+<p><figure class="content-center">
+    <img src="../../img/automation/rebalance-buffer-positive.png" alt="Buffer">
+    <figcaption class="caption">Buffer</figcaption>
+</figure>
+</p>
+<p>This adds a buffer on either side of the position range, in which rebalancing should not take place. For example if a user&#x27;s position is in the 3000-3300 range, a buffer of 1% on the lower side will mean that rebalance will not take place when the price is between 2970 and 3000. While the price is in that buffer the position will remain as is.</p>
+<p>Similarly in that example a buffer of 1% on the upper side will mean that rebalance will not take place between 3300 and 3333.</p>
+<p>Buffer settings are relative, so a buffer of 1%, 1% will remain so when a position is rebalanced (1% below the new lower end, 1% above the new upper end).</p>
+<p>Negative buffers are also allowed.</p>
+<p><figure class="content-center">
+    <img src="../../img/automation/rebalance-buffer-negative.png" alt="Buffer">
+    <figcaption class="caption">Buffer</figcaption>
+</figure>
+</p>
+<p>A buffer of -1% on the lower side in the example above would mean that the rebalance would not take place when the price is between 3030 and 3300, but it will take place when the price is below 3030, while the position might still be in range.</p>
+<p>Similarly a buffer of -1% on the upper side would mean that the rebalance would not take place when the price is between 3000 and 3267, but it will take place when the price is above 3267, while the position might still be in range.</p>
 <doc-anchor-target id="stop-loss">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#stop-loss">#</doc-anchor-trigger>
         <span>Stop Loss</span>
     </h3>
 </doc-anchor-target>
-<p>Lastly stop loss values can be set on either side. Continuing the previous example, a stop loss value of 2700 on the lower side will mean that automatic rebalancing will stop completely if the price drops below 2700.</p>
+<p><figure class="content-center">
+    <img src="../../img/automation/rebalance-stop-loss.png" alt="Stop Loss">
+    <figcaption class="caption">Stop Loss</figcaption>
+</figure>
+</p>
+<p>Stop loss indicates fixed prices, below or above which rebalance stops taking place. Continuing the previous example, a stop loss value of 2700 on the lower side will mean that automatic rebalancing will stop completely if the price drops below 2700.</p>
 <p>The same mechanism on the upper side if setting a stop loss of 3600 would disable all automatic rebalancing once the price goes above 3600.</p>
 <p>Stop loss settings are absolute, so a stop loss setting of 2700, 3600 will remain the same when a position is rebalanced.</p>
+<p>Stop loss values are defined in tick prices, so e.g. when entering 2500 it might be converted to the nearest available tick (see screenshot).</p>
+<p>The position remains as is, stop loss does not trigger an exit.</p>
 <doc-anchor-target id="advanced-settings-example">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-settings-example">#</doc-anchor-trigger>
@@ -231,10 +291,17 @@
     </h3>
 </doc-anchor-target>
 <p>Putting all advanced settings together, for the example position of 3000-3300, creates two ranges on either side of the user&#x27;s position where automatic rebalance will take place:</p>
-<p>2700-2970 and 3333-3600</p>
+<ul>
+<li>2700-2970 and 3333-3600</li>
+</ul>
 <p>As well as four ranges where automatic rebalance will not take place:</p>
-<p>0-2700, 2970-3000, 3300-3333, 3600-infinite</p>
-<p>The advanced settings are entirely optional, the default behaviour when not setting a buffer and stop loss would be to rebalance whenever the position is out of range.</p>
+<ul>
+<li>0-2700</li>
+<li>2970-3000</li>
+<li>3300-3333</li>
+<li>3600-infinite</li>
+</ul>
+<p>The advanced settings are entirely optional; the default behaviour when not setting a buffer and stop loss would be to rebalance whenever the position is out of range.</p>
 
                                 
                                 <!-- Required only on API pages -->

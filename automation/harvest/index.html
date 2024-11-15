@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.782313449241">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.784967927027">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Automatic Harvest</title>
     <meta name="title" content="Automatic Harvest">
-    <meta name="description" content="Auto-Harvest automatically harvests your positions up to once per day, with the minimum earnings currently set to the equivalent of $50.">
+    <meta name="description" content="Auto-Harvest automatically harvests your positions, currently each time the rewards are above the equivalent of $50.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.vfat.io/automation/harvest/">
@@ -20,23 +20,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.vfat.io/automation/harvest/">
     <meta property="og:title" content="Automatic Harvest">
-    <meta property="og:description" content="Auto-Harvest automatically harvests your positions up to once per day, with the minimum earnings currently set to the equivalent of $50.">
-    <meta property="og:image" content="https://docs.vfat.io/img/automation/settings.png">
+    <meta property="og:description" content="Auto-Harvest automatically harvests your positions, currently each time the rewards are above the equivalent of $50.">
+    <meta property="og:image" content="https://docs.vfat.io/img/automation/harvest-new-position.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.vfat.io/automation/harvest/">
     <meta property="twitter:title" content="Automatic Harvest">
-    <meta property="twitter:description" content="Auto-Harvest automatically harvests your positions up to once per day, with the minimum earnings currently set to the equivalent of $50.">
-    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/settings.png">
+    <meta property="twitter:description" content="Auto-Harvest automatically harvests your positions, currently each time the rewards are above the equivalent of $50.">
+    <meta property="twitter:image" content="https://docs.vfat.io/img/automation/harvest-new-position.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.782313449241" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.784967927027" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.782313449241" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,29 +175,35 @@
         <span>Automatic Harvest</span>
     </h1>
 </doc-anchor-target>
-<p>Auto-Harvest automatically harvests your positions up to once per day, with the minimum earnings currently set to the equivalent of $50.</p>
+<p>Auto-Harvest automatically harvests your positions, currently each time the rewards are above the equivalent of $50.</p>
 <p>There is a 1.2% auto-harvest fee on rewards, part of which is used to pay for gas costs (no further user input needed).</p>
 <p>The setting can be enabled in two places:</p>
-<p>Firstly in the general settings (gear icon on the top right).</p>
+<p>Firstly when opening a new position.</p>
 <p><figure class="content-center">
-    <img src="../../img/automation/settings.png" alt="Settings">
-    <figcaption class="caption">Settings</figcaption>
+    <img src="../../img/automation/harvest-new-position.png" alt="New Position">
+    <figcaption class="caption">New Position</figcaption>
 </figure>
 </p>
 <p>Secondly in the Harvest tab of any active position.</p>
 <p><figure class="content-center">
-    <img src="../../img/automation/harvest.png" alt="Harvest">
-    <figcaption class="caption">Harvest</figcaption>
+    <img src="../../img/automation/harvest-tab.png" alt="Harvest Tab">
+    <figcaption class="caption">Harvest Tab</figcaption>
 </figure>
 </p>
-<p>It is enabled once per chain and applies to all positions on that chain.</p>
+<p>You also have the option of converting the rewards to a token of your choice.</p>
+<p><figure class="content-center">
+    <img src="../../img/automation/harvest-convert-rewards.png" alt="Convert Rewards">
+    <figcaption class="caption">Convert Rewards</figcaption>
+</figure>
+</p>
+<p>It is enabled individually for each position.</p>
 <p>The general setting of Automation needs to be enabled as well, so this requires two transactions:</p>
 <ol type="a">
 <li>Enable Automation</li>
 <li>Enable Auto-Harvest</li>
 </ol>
 <p>These can then be disabled in the general settings.</p>
-<p>Auto-Harvest and Auto-Compound are mutually exclusive, only one per chain can be enabled.</p>
+<p>Auto-Harvest and Auto-Compound are mutually exclusive, only one per each position can be enabled.</p>
 
                                 
                                 <!-- Required only on API pages -->
