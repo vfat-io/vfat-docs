@@ -4,7 +4,7 @@ label: Welcome
 
 # vfat.io Documentation
 
-![](img/vfat_bird-modified.png)
+![](img/vfat-bird-modified.png)
 
 <br>
 
@@ -20,4 +20,4 @@ label: Welcome
 
 To get started, head over to [vfat.io](https://vfat.io) and either Connect your wallet, or enter an address or ENS name:
 
-![Landing Page](img/landing_page.png)
+![Landing Page](img/landing-page.png)

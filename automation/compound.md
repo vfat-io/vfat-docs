@@ -8,15 +8,15 @@ There is a 1.8% auto-compound fee on rewards, part of which is used to pay for g
 
 The setting can be enabled in two places: 
 
-Firstly in the general settings (gear icon on the top right).
+Firstly when opening a new position
 
-![Settings](../img/automation/settings.png)
+![New Position](../img/automation/compound-new-position.png)
 
 Secondly in the Compound tab of any active position.
 
-![Compound](../img/automation/compound.png)
+![Compound Tab](../img/automation/compound-tab.png)
 
-It is enabled once per chain and applies to all positions on that chain. 
+It is enabled individually for each position. 
 
 The general setting of Automation needs to be enabled as well, so this requires two transactions:
 a) Enable Automation
@@ -24,4 +24,4 @@ b) Enable Auto-Compound
 
 These can then be disabled in the general settings.
 
-Auto-Compound and Auto-Harvest are mutually exclusive, only one per chain can be enabled.
+Auto-Compound and Auto-Harvest are mutually exclusive, only one per each position can be enabled.
