@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.784967927027">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.784968054610">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.784967927027" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.784968054610" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.784968054610" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.784967927027" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.784968054610" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -253,8 +253,8 @@
     </h3>
 </doc-anchor-target>
 <p><figure class="content-center">
-    <img src="../../img/automation/rebalance-buffer-positive.png" alt="Buffer">
-    <figcaption class="caption">Buffer</figcaption>
+    <img src="../../img/automation/rebalance-buffer-positive.png" alt="PositiveBuffer">
+    <figcaption class="caption">PositiveBuffer</figcaption>
 </figure>
 </p>
 <p>This adds a buffer on either side of the position range, in which rebalancing should not take place. For example if a user&#x27;s position is in the 3000-3300 range, a buffer of 1% on the lower side will mean that rebalance will not take place when the price is between 2970 and 3000. While the price is in that buffer the position will remain as is.</p>
@@ -262,8 +262,8 @@
 <p>Buffer settings are relative, so a buffer of 1%, 1% will remain so when a position is rebalanced (1% below the new lower end, 1% above the new upper end).</p>
 <p>Negative buffers are also allowed.</p>
 <p><figure class="content-center">
-    <img src="../../img/automation/rebalance-buffer-negative.png" alt="Buffer">
-    <figcaption class="caption">Buffer</figcaption>
+    <img src="../../img/automation/rebalance-buffer-negative.png" alt="Negative Buffer">
+    <figcaption class="caption">Negative Buffer</figcaption>
 </figure>
 </p>
 <p>A buffer of -1% on the lower side in the example above would mean that the rebalance would not take place when the price is between 3030 and 3300, but it will take place when the price is below 3030, while the position might still be in range.</p>
