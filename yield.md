@@ -40,29 +40,3 @@ The quick actions on the right allow you to Compound your earnings, or Exit back
 [vfat.io Yield](https://vfat.io/yield) is powered by Sickle, a self-custodied contract that is deployed on each chain when making your first deposit. Sickle can perform complex actions in a single transaction, as defined in Strategy contracts, such as the inaugural Aerodrome Strategy.
 
 Contracts have been audited by [yAudit](https://reports.yaudit.dev/reports/10-2023-Sickle-Update/). Please note smart contracts bear risk regardless of audits, and there is always the underlying risk of the pool entered.
-
-### Fee Structure
-
-Depending on your choice of deposit or withdrawal method, there may be a charge, according to the table below:
-
-| Method | Fee |
-| --- | --- |
-| Deposit LP token or NFT | 0% |
-| Deposit both underlying tokens | 0% |
-| Deposit other token (swap takes place) | 0.09% |
-| Withdraw LP token or NFT | 0% |
-| Withdraw to both underlying tokens | 0% | 
-| Withdraw to single token (swap takes place) | 0.09% |
-
-Other actions always carry a fee, as below:
-
-| Action | Fee |
-| --- | --- |
-| Harvest | 0.9% of rewards |
-| Compound | 0.9% of rewards |
-| Rebalance <=0.05% fee pool | 0.01% of position |
-| Rebalance <=0.3% fee pool | 0.03% of position |
-| Rebalance higher fee pool | 0.05% of position |
-| Auto-Harvest | 1.2% of rewards |
-| Auto-Compound | 1.8% of rewards |
-| Auto-Rebalance | Same as manual |
