@@ -1,6 +1,6 @@
 ---
 label: Fees
-order: 102
+order: 100
 ---
 
 # Fee Structure
