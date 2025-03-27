@@ -39,4 +39,4 @@ The quick actions on the right allow you to Compound your earnings, or Exit back
 
 [vfat.io Yield](https://vfat.io/yield) is powered by Sickle, a self-custodied contract that is deployed on each chain when making your first deposit. Sickle can perform complex actions in a single transaction, as defined in Strategy contracts, such as the inaugural Aerodrome Strategy.
 
-Contracts have been audited by [yAudit](https://reports.yaudit.dev/reports/10-2023-Sickle-Update/). Please note smart contracts bear risk regardless of audits, and there is always the underlying risk of the pool entered.
+Contracts have been audited by [Electisec](https://reports.electisec.tech/reports/10-2023-Sickle-Update/). Please note smart contracts bear risk regardless of audits, and there is always the underlying risk of the pool entered.
