@@ -14,10 +14,10 @@ https://reports.electisec.tech/reports/10-2023-Sickle-Update/
 
 https://reports.electisec.tech/reports/05-2024-Sickle-3/
 
-https://reports.electisec.tech/reports/11-2024-Sickle-Strategies/
+https://reports.electisec.tech/reports/10-2024-Sickle-Strategies/
 
 ---
 
 LendingStrategy and SickleMultisig
 
-https://reports.electisec.tech/reports/06-2024-Vfat-Sickle-Multisig/
+https://reports.electisec.tech/reports/06-2024-Sickle-4/
