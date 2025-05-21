@@ -24,10 +24,15 @@ LendingStrategy and SickleMultisig
 https://reports.electisec.com/reports/06-2024-Sickle-4/
 
 
-
-
 ## [Ackee](ackee.xyz)
 
-Optimism deployment audit 1/2
+Optimism deployment audit 1/2 - 05/2025
 
 https://github.com/Ackee-Blockchain/public-audit-reports/blob/master/2025/ackee-blockchain-vfat-sickle-report.pdf
+
+
+## [Omniscia](omniscia.io)
+
+Full code audit - 04/2025
+
+https://omniscia.io/reports/vfat-sickle-contracts-678fbcce38f52b001894a175/
