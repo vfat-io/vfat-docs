@@ -30,6 +30,10 @@ Optimism deployment audit 1/2 - 05/2025
 
 https://github.com/Ackee-Blockchain/public-audit-reports/blob/master/2025/ackee-blockchain-vfat-sickle-report.pdf
 
+Optimism deployment audit 2/2 - 06/2025
+
+https://github.com/Ackee-Blockchain/public-audit-reports/blob/master/2025/ackee-blockchain-vfat-farm-strategies-report.pdf
+
 
 ## [Omniscia](omniscia.io)
 
